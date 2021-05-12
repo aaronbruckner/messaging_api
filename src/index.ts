@@ -1,9 +1,11 @@
 import express from 'express'
+import {register as regesterLogin} from './endpoints/login';
 
 const app = express();
- 
-app.get('/', function (req, res) {
-  res.send('Hello World');
-});
+
+/**
+ * Regester Endpoints
+ */
+regesterLogin(app);
  
 app.listen(8080);

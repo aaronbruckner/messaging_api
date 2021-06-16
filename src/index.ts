@@ -1,8 +1,14 @@
-import express from 'express'
+import express, {Request, Response, NextFunction} from 'express'
+import accessLogger from './middleware/accessLogger';
 import * as loginEndpoints from './endpoints/login';
 import * as userEndpoints from './endpoints/user'
 
 const app = express();
+
+/**
+ * Register Middleware
+ */
+app.use(accessLogger);
 
 /**
  * Regester Endpoints

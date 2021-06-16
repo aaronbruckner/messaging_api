@@ -6,7 +6,7 @@ interface LoginResponse {
 }
 
 export function register(app: Express) {
-    app.post('/login', login);
+    app.post('/v1/login', login);
 }
 
 function login(req: Request, res: Response, next: NextFunction) {

@@ -1,11 +1,13 @@
 import express from 'express'
-import {register as regesterLogin} from './endpoints/login';
+import * as loginEndpoints from './endpoints/login';
+import * as userEndpoints from './endpoints/user'
 
 const app = express();
 
 /**
  * Regester Endpoints
  */
-regesterLogin(app);
+loginEndpoints.register(app);
+userEndpoints.register(app);
  
 app.listen(8080);

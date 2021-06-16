@@ -15,7 +15,7 @@ interface UserGetResponse {
     lastName: string;
 }
 
-function userCreate(req: Request, res: Response) {
+function userCreate(req: Request, res: Response): void {
     const body: UserCreateResponse = {
         userId: 'userId123',
     };
@@ -23,7 +23,7 @@ function userCreate(req: Request, res: Response) {
     res.send(body).status(200)
 }
 
-function userGet(req: Request, res: Response) {
+function userGet(req: Request, res: Response): void {
     const body: UserGetResponse = {
         userId: 'userId123',
         firstName: 'Aaron',

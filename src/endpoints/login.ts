@@ -9,7 +9,7 @@ export function register(app: Express) {
     app.post('/v1/login', login);
 }
 
-function login(req: Request, res: Response, next: NextFunction) {
+function login(req: Request, res: Response, next: NextFunction): void {
     const body: LoginResponse = {
         accessToken: "FakeAccessToken",
         refreshToken: "FakeRefreshToken"
